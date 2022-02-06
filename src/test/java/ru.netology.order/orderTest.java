@@ -1,12 +1,11 @@
 package ru.netology.order;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.List;
@@ -17,7 +16,7 @@ class orderTest {
 
     @BeforeAll
     static void setupClass() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Anna\\IdeaProjects\\hw_web\\driver\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
