@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+
 import java.util.List;
 
 class orderTest {
@@ -16,7 +17,7 @@ class orderTest {
 
     @BeforeAll
     static void setupClass() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().driverVersion("99.0.4844.17").setup();
     }
 
     @BeforeEach
@@ -38,8 +39,6 @@ class orderTest {
     @Test
     void shouldTestOrderPage() {
         driver.get("http://localhost:9999");
-        // driver.findElement().sendKeys("Анна Горчилина");
-        // driver.findElement().sendKeys("89273031991");
         List<WebElement> textFields = driver.findElements(By.className("input__control"));
         textFields.get(0).sendKeys("Анна Горчилина");
         textFields.get(1).sendKeys("+79273031991");
