@@ -17,14 +17,13 @@ class orderTest {
 
     @BeforeAll
     static void setupClass() {
-        WebDriverManager.chromedriver().driverVersion("95.0.4638.69").setup();
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
     void setupTest() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
-        options.addArguments("disable-infobars");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
