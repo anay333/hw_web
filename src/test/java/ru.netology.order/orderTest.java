@@ -17,7 +17,7 @@ class orderTest {
 
     @BeforeAll
     static void setupClass() {
-        WebDriverManager.chromedriver().driverVersion("99.0.4844.17").setup();
+        WebDriverManager.chromedriver().driverVersion("95.0.4638.69").setup();
     }
 
     @BeforeEach
