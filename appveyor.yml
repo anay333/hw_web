@@ -1,3 +1,4 @@
+
 image: Ubuntu
 
 stack: jdk 11
@@ -9,8 +10,10 @@ branches:
 build: off
 
 install:
-java -jar app-order.jar -port=7777
+  - java -jar ./artifacts/app-order.jar &
+  - chmod +x gradlew
+
 
 build_script:
-  - ./gradlew test --info
+    - ./gradlew test --info
 
