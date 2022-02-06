@@ -17,7 +17,7 @@ class orderTest {
 
     @BeforeAll
     static void setupClass() {
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Anna\\IdeaProjects\\hw_web\\driver\\chromedriver.exe");
     }
 
     @BeforeEach
