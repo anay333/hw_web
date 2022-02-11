@@ -2,14 +2,11 @@ package Order;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-
-import java.util.List;
 
 class OrderTest {
 
@@ -41,8 +38,8 @@ class OrderTest {
     @Test
     void shouldTestOrderPage() {
         driver.get("http://localhost:9999");
-        driver.findElement(By.cssSelector("[data-test-id='name']input")).sendKeys("Анна Горчилина-Петрова");
-        driver.findElement(By.cssSelector("[data-test-id='phone']input")).sendKeys("+79273031991");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Анна Горчилина-Петрова");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79273031991");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button__text")).click();
         String actualMessage = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText().strip();
