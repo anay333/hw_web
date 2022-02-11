@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.List;
 
-class orderTest {
+class OrderTest {
 
     WebDriver driver;
 
