@@ -45,7 +45,7 @@ class OrderTest {
         driver.findElement(By.cssSelector("[data-test-id='phone']input")).sendKeys("+79273031991");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button__text")).click();
-        String actualMessage = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
+        String actualMessage = driver.findElement(By.cssSelector("[data-test-id='order-success']Success_successBlock__2L3Cw")).getText();
         String expectedMessage = "  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expectedMessage, actualMessage, "Фактическое не равно актуальному");
     }
