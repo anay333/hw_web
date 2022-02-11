@@ -41,12 +41,11 @@ class OrderTest {
     @Test
     void shouldTestOrderPage() {
         driver.get("http://localhost:9999");
-        List<WebElement> textFields = driver.findElements(By.className("input__control"));
-        textFields.get(0).sendKeys("Анна Горчилина");
-        textFields.get(1).sendKeys("+79273031991");
+        driver.findElement(By.cssSelector("[data-test-id='name']input")).sendKeys("Анна Горчилина-Петрова");
+        driver.findElement(By.cssSelector("[data-test-id='phone']input")).sendKeys("+79273031991");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button__text")).click();
-        String actualMessage = driver.findElement(By.className("Success_successBlock__2L3Cw")).getText();
+        String actualMessage = driver.findElement(By.cssSelector("order-success")).getText();
         String expectedMessage = "  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expectedMessage, actualMessage, "Фактическое не равно актуальному");
     }
